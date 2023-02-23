@@ -20,7 +20,7 @@ of technology and work hard towards achieving the goals of the organization. <br
 </table>
 
 <div align="center">
-  <p align="left"> <img src="https://komarev.com/ghpvc/?username=Akshay270802&label=Profile%20views&color=6805D3&style=flat" alt="Akshay Panchal Views" /> </p>
+  <p align="left"> <img src="https://komarev.com/ghpvc/?username=AK270802&label=Profile%20views&color=6805D3&style=flat" alt="Akshay Panchal Views" /> </p>
 <div align="center">
     <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=Akshay270802&theme=dark"/></p>
 </div>
