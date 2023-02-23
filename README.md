@@ -1,5 +1,5 @@
 <h1 align="center">Hi, I'm Akshay</h1>
-<h4>A Machine Learning Engineer, having great knowledge and experience in creating and optimizing algorithms of ML.
+<h4>An expert in designing and refining machine learning algorithms.
   And to accept the challenges and utilize my education more meaningfully in the sphere
 of technology and work hard towards achieving the goals of the organization. <br> Currently working on Algorithm Visualizer. I live in Mumbai, Maharastra, India 🇮🇳. 
 <br>🙌 I'm a geek, tech enthusiast, soccer fan.</p></h4>
