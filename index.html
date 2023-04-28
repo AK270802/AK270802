@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en" class="a0">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Akshay's Portfolio </title>
+  <link rel="shortcut icon" href="images/logo/avatar.png" sizes="192x192" type="image/png" />
+  <!-- ===== CSS Files ===== -->
+  <link rel="stylesheet" href="css/glightbox.min.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/apexcharts.css" />
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <!-- ===== Alpine JS ===== -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script defer src="./js/alpine.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script type="text/javascript" src="js/readmore.min.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
+  <script>
+    // ===== wow js
+    new WOW().init();
+  </script>
+</head>
+
+<body x-data="
+      {
+        scrolledFromTop: false
+      }
+    " x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+  @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" class="a1 dark:a2">
+  <!-- ===== Header start ===== -->
+  <header x-data="
+        {
+          navbarOpen: false,
+          dropdownOpen: false
+        }
+      " :class="scrolledFromTop ? 'a3p dark:a2 a4 dark:a4 a5 a6 ' : ' a7 dark:a7' " class="a8 a9 aa ab ac ad">
+    <div class="ae">
+      <div class="af ag aa ac ah">
+        <div class="aj ak">
+          <a href="index.html" :class="scrolledFromTop && '!al lg:!am' " class="an ab a2h lg:aW">
+            <img src="images/brands/mylogo-bg.png" alt="logo" class="ab dark:ao" />
+            <img src="images/brands/mylogo-bg.png" alt="logo" class="ao ab dark:an" />
+          </a>
+        </div>
+        <div class="aa ab ac ap ak">
+          <div>
+            <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' " id="navbarToggler"
+              class="aq ar as/2 an at/2 au av aw[6px] ax focus:ay lg:ao">
+              <span :class="navbarOpen && 'az aA[7px]' " class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
+              <span :class="navbarOpen && 'aE' " class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
+              <span :class="navbarOpen && 'aA[-8px] aF[135deg]' "
+                class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
+            </button>
+            <nav :class="!navbarOpen && 'ao' " id="navbarCollapse"
+              class="aq ar aG ab aH[250px] au a1 al aI aJ dark:a2 lg:aK lg:an lg:ab lg:aj lg:a7 lg:aL lg:aM dark:lg:a7">
+              <ul class="aN lg:aa">
+                <li>
+                  <a href="#home"
+                    class="a3q scroll-menu aa am a2B aQ  hover:aR dark:aS dark:hover:aR lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+                    Home </a>
+                </li>
+                <li>
+                  <a href="#education"
+                    class="a3q scroll-menu aa am a2B aQ hover:aR dark:aS dark:hover:aR lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+                    Education </a>
+                </li>
+                <li>
+                  <a href="#experience"
+                    class="a3q scroll-menu aa am a2B aQ hover:aR dark:aS dark:hover:aR lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+                    Experience </a>
+                </li>
+                <li>
+                  <a href="#projects"
+                    class="a3q scroll-menu aa am a2B aQ hover:aR dark:aS dark:hover:aR lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+                    Projects </a>
+                </li>
+                <li>
+                  <a href="#contact"
+                    class="a3q scroll-menu aa am a2B aQ hover:aR dark:aS dark:hover:aR lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+                    Contact </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="aa ap a1l lg:a1m xl:a1n 2xl:a1o">
+            <div class="a1p">
+              <label for="darkToggler" class="aa a1q a1r a1s ac a1t a1u a1v dark:a1w[#1E2763]">
+                <input type="checkbox" name="darkToggler" id="darkToggler" class="a1x" aria-label="darkToggler" />
+                <span class="aa a1y a1z ac a1t a1u a1A aT dark:a7 dark:aS">
+                  <svg width="16" height="16" viewBox="0 0 16 16" class="a1B">
+                    <path
+                      d="M4.50663 3.2267L3.30663 2.03337L2.36663 2.97337L3.55996 4.1667L4.50663 3.2267ZM2.66663 7.00003H0.666626V8.33337H2.66663V7.00003ZM8.66663 0.366699H7.33329V2.33337H8.66663V0.366699ZM13.6333 2.97337L12.6933 2.03337L11.5 3.2267L12.44 4.1667L13.6333 2.97337ZM11.4933 12.1067L12.6866 13.3067L13.6266 12.3667L12.4266 11.1734L11.4933 12.1067ZM13.3333 7.00003V8.33337H15.3333V7.00003H13.3333ZM7.99996 3.6667C5.79329 3.6667 3.99996 5.46003 3.99996 7.6667C3.99996 9.87337 5.79329 11.6667 7.99996 11.6667C10.2066 11.6667 12 9.87337 12 7.6667C12 5.46003 10.2066 3.6667 7.99996 3.6667ZM7.33329 14.9667H8.66663V13H7.33329V14.9667ZM2.36663 12.36L3.30663 13.3L4.49996 12.1L3.55996 11.16L2.36663 12.36Z" />
+                  </svg>
+                </span>
+                <span class="aa a1y a1z ac a1t a1u a7 aQ dark:a1A dark:aT">
+                  <svg width="13" height="15" viewBox="0 0 13 15" class="a1B">
+                    <path
+                      d="M10.6111 12.855C11.591 12.1394 12.3151 11.1979 12.7723 10.1623C10.4824 10.4065 8.1342 9.46314 6.67948 7.47109C5.22476 5.47905 5.04093 2.95516 5.97054 0.848179C4.84491 0.968503 3.72768 1.37162 2.74781 2.08719C-0.224105 4.25747 -0.874706 8.43084 1.29558 11.4028C3.46586 14.3747 7.63923 15.0253 10.6111 12.855Z" />
+                  </svg>
+                </span>
+              </label>
+            </div>
+            <div class="ao sm:aa">
+              <a href="images/resume/Akshay_Resume.pdf" target="_blank"
+                class="a3q aa ac a1t a1u a1C a1D aw[9px] a1E a1F aP aQ a1G hover:a1H hover:a1A hover:aT dark:a1I dark:aT dark:hover:a1 dark:hover:aR lg:px-4 2xl:px-8">
+                Resume </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ===== Header end ===== -->
+  <!-- ===== Hero Section start ===== -->
+  <section id="home" class="a3p dark:a2 af a2E a3r a3s">
+    <div class="ae">
+      <div class="ag aa a1L">
+        <div class="ab ak">
+          <div class="a3t aH[720px] a2G">
+            <img src="images/logo/hero1-dark.svg" alt="ayroui" class="floating  ao dark:an" />
+            <img src="images/logo/hero1-dark.svg" alt="ayroui" class="floating dark:ao" />
+            <h1 class="a1N a2o a1P a2p a1k dark:aT md:a2Q[45px]"></h1>
+            <p class="a3q a3t a1N aH[620px] a2B a1R aQ dark:aT"> A B.Tech student by day, a ML enthusiast by noon and a
+              investor by night. I am more than what meets the eye. To know more, keep scrolling! </p>
+            <div class="a3u a1W aa a1L ac a1t sm:a3v">
+              <div class="aZ af a3w a3x sm:a3y">
+                <a href="https://twitter.com/Akshay209012087" class="aV a1c" name="social icon"
+                  aria-label="social icon">
+                  <img src="images/social/twitter.svg">
+                </a>
+              </div>
+              <div class="aZ af a3w a3x sm:a3y">
+                <a href="https://www.linkedin.com/in/akshay-panchal8702/" class="aV a1c" name="social icon"
+                  aria-label="social icon">
+                  <img src="images/social/linkedin.svg">
+                </a>
+              </div>
+              <div class="aZ af a3w a3x sm:a3y">
+                <a href="https://github.com/AK270802" name="social icon" aria-label="social icon">
+                  <img src="images/social/github.svg">
+                </a>
+              </div>
+              <div class="aZ af a3w a3x sm:a3y">
+                <a href="mailto:avpdazzler2708@gmail.com" class="aV a1c" name="social icon" aria-label="social icon">
+                  <img src="images/social/gmail.svg">
+                </a>
+              </div>
+            </div>
+            <div class="a1t">
+              <a href="images/resume/resume.pdf" target="_blank"
+                class="a3q a1u a1A a22 a1E a1F aP aT hover:a2X dark:hover:bg-opacity-90"> Download Resume </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aq a8 a1a a2Z a2w ab a3z" style="
+          background-image: linear-gradient(
+            180deg,
+            #a8c66b 0%,
+            rgba(62, 125, 255, 0) 100%
+          );
+        "></div>
+    <img src="images/shapes/hero-shape-light-1.svg" alt="" class="aq a1a a8 a2Z dark:ao" />
+    <img src="images/shapes/hero-shape-dark-1.svg" alt="" class="aq a1a a8 a2Z" />
+    <img src="images/shapes/hero-shape-light-2.svg" alt="" class="aq a19 a8 a2Z dark:ao" />
+    <img src="images/shapes/hero-shape-dark-2.svg" alt="" class="aq a19 a8 a2Z" />
+  </section>
+  <!-- ===== Hero Section end ===== -->
+  <!-- ===== Brands Section start ===== -->
+  <section class="a3p dark:a2">
+    <!--<div class="ae">
+      <div class="wow fadeInUp a3A dark:a2l[#2D2C4A]" data-wow-delay="0s">
+        <h2 class="a3q a1W a2G a2B a1P a1k dark:aT sm:a2B"> Worked with these organizations </h2>
+        <div class="ag aa a1L ac a1t">
+          <div class="ak">
+            <a href="https://evolutioniq.com/" target="_blank" rel="nofollow noopenner" class="a1W aa aH[170px] a1t">
+              <img src="images/brands/eiq.png" alt="ayroui" class="a3t ao a3B a2G dark:an" />
+              <img src="images/brands/eiq.png" alt="ayroui" class="a3t a3B a2G dark:ao" />
+            </a>
+          </div>--->
+    <!--<div class="ak">
+            <a href="https://att.com" target="_blank" rel="nofollow noopenner" class="a1W aa aH[170px] a1t">
+              <img src="images/brands/att-dark.png" alt="lineicons" class="a3t ao a32 a2G dark:an" />
+              <img src="images/brands/att-light.svg" alt="lineicons" class="a3t a32 a2G dark:ao" />
+            </a>
+          </div>--->
+    <!---<div class="ak">
+            <a href="https://chop.edu" target="_blank" rel="nofollow noopenner" class="a1W aa aH[170px] a1t">
+              <img src="images/brands/chop.png" alt="lineicons" class="a3t ao a1y a2G dark:an" />
+              <img src="images/brands/chop.png" alt="lineicons" class="a3t a1y a2G dark:ao" />
+            </a>
+          </div>
+          <div class="ak">
+            <a href="https://vnshealth.org" target="_blank" rel="nofollow noopenner" class="a1W aa aH[170px] a1t">
+              <img src="images/brands/VNS-Health-Logo-dark.png" alt="tailgrids" class="a3t ao a32 a2G dark:an" />
+              <img src="images/brands/VNS-Health-Logo-light.png" alt="tailgrids" class="a3t a1y a2G dark:ao" />
+            </a>
+          </div>
+          <div class="ak">
+            <a href="https://jvion.com" target="_blank" rel="nofollow noopenner" class="a1W aa aH[170px] a1t">
+              <img src="images/brands/jvion-logo.png" alt="ayroui" class="a3t ao a1y a2G dark:an" />
+              <img src="images/brands/jvion-logo.png" alt="ayroui" class="a3t a1y a2G dark:ao" />
+            </a>
+          </div>--->
+    </div>
+    </div>
+    </div>
+  </section>
+  <!-- ===== Brands Section end ===== -->
+  <!-- ===== Team Section start ===== -->
+  <section id="education" class="a3p dark:a2 a36 a2l[#F3F4F4] a1J[120px] a1T dark:a2l[#2D2C4A]">
+    <div class="ae">
+      <div class="wow fadeInUp a3t a3C aH[590px] a2G md:a30" data-wow-delay="0s">
+        <span class="a3q a2d aO a1P aR sm:a1O">
+          <div style="width:100%; height:100%">
+            <img style="margin-left: auto;
+          margin-right: auto; margin-bottom: 3rem;
+          display: block;" src="images/education/hat.svg" alt="logo" class="floating" width="70%" />
+          </div> Degrees
+        </span>
+        <h2 class="a3q a2d a2o a1P a2p aR dark:aT md:a2Q[45px]"> Education </h2>
+        <blockquote>
+          <p class="a3q a1O a1R aQ dark:aS"> Live as if you were to die tomorrow. Learn as if you were to live forever.
+            <i> — Mahatma Gandhi</i>
+          </p>
+        </blockquote>
+      </div>
+      <div class="ag aa a1L">
+        <div class="ab ak sm:a1M lg:a1M/3">
+          <div class="a3D  aZ wow fadeInUp a1W au a3E a21 a1v a1f a2G a1G a1H dark:a3F dark:a3" data-wow-delay="0s">
+            <div class="a2a a2c a1i" style="display: inline-block;
+                width: 130px;
+                height: 130px;
+                background: url(data:image/jpeg;base64,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);
+                background-position: 50% 50%;
+                background-size: cover;
+                border-radius: 50%;"></div>
+            <div>
+              <h3 class="a3q a2s a1O aP a1k dark:aT"> New Horizon Institute of T & M </h3>
+              <p class="a3q a2d aO a1R aQ dark:aS"> B.Tech in Artificial intelligence and Data Science <br> (2020 -
+                Present) </p>
+              <br>
+              <div class="a1N aa ac a1t a3G">
+                <a href="#" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link"
+                  aria-label="social-link">
+                  <svg width="20" height="20" viewBox="0 0 20 20" class="a1B">
+                    <path
+                      d="M18.7168 4.99998C18.0751 5.29165 17.3834 5.48331 16.6668 5.57498C17.4001 5.13331 17.9668 4.43331 18.2334 3.59165C17.5418 4.00831 16.7751 4.29998 15.9668 4.46665C15.3084 3.74998 14.3834 3.33331 13.3334 3.33331C11.3751 3.33331 9.77511 4.93331 9.77511 6.90831C9.77511 7.19165 9.80845 7.46665 9.86678 7.72498C6.90011 7.57498 4.25845 6.14998 2.50011 3.99165C2.19178 4.51665 2.01678 5.13331 2.01678 5.78331C2.01678 7.02498 2.64178 8.12498 3.60845 8.74998C3.01678 8.74998 2.46678 8.58331 1.98345 8.33331C1.98345 8.33331 1.98345 8.33331 1.98345 8.35831C1.98345 10.0916 3.21678 11.5416 4.85011 11.8666C4.55011 11.95 4.23345 11.9916 3.90845 11.9916C3.68345 11.9916 3.45845 11.9666 3.24178 11.925C3.69178 13.3333 5.00011 14.3833 6.57511 14.4083C5.35845 15.375 3.81678 15.9416 2.13345 15.9416C1.85011 15.9416 1.56678 15.925 1.28345 15.8916C2.86678 16.9083 4.75011 17.5 6.76678 17.5C13.3334 17.5 16.9418 12.05 16.9418 7.32498C16.9418 7.16665 16.9418 7.01665 16.9334 6.85831C17.6334 6.35831 18.2334 5.72498 18.7168 4.99998Z" />
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/school/new-horizon-institute-of-technology-and-management/?originalSubdomain=in"
+                  class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                  <svg width="20" height="20" viewBox="0 0 20 20" class="a1B">
+                    <path
+                      d="M15.8333 2.5C16.2754 2.5 16.6993 2.67559 17.0118 2.98816C17.3244 3.30072 17.5 3.72464 17.5 4.16667V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H15.8333ZM15.4167 15.4167V11C15.4167 10.2795 15.1304 9.5885 14.621 9.07903C14.1115 8.56955 13.4205 8.28333 12.7 8.28333C11.9917 8.28333 11.1667 8.71667 10.7667 9.36667V8.44167H8.44167V15.4167H10.7667V11.3083C10.7667 10.6667 11.2833 10.1417 11.925 10.1417C12.2344 10.1417 12.5312 10.2646 12.75 10.4834C12.9688 10.7022 13.0917 10.9989 13.0917 11.3083V15.4167H15.4167ZM5.73333 7.13333C6.10464 7.13333 6.46073 6.98583 6.72328 6.72328C6.98583 6.46073 7.13333 6.10464 7.13333 5.73333C7.13333 4.95833 6.50833 4.325 5.73333 4.325C5.35982 4.325 5.0016 4.47338 4.73749 4.73749C4.47338 5.0016 4.325 5.35982 4.325 5.73333C4.325 6.50833 4.95833 7.13333 5.73333 7.13333ZM6.89167 15.4167V8.44167H4.58333V15.4167H6.89167Z" />
+                  </svg>
+                </a>
+                <a href="https://nhitm.ac.in/" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link"
+                  aria-label="social-link">
+                  <?xml version="1.0" encoding="utf-8"?>
+                  <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                  <svg class="a1B" width="20" height="20" version="1.1" id="lni_lni-website"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                    <g>
+                      <path d="M20.5,19.4l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1s-1.5,0.4-1.8,1.1l-1,2l-1.2-2.4c-0.4-0.9-1.5-1.2-2.3-0.8
+                      c-0.9,0.4-1.2,1.5-0.8,2.3l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1c0.8,0,1.5-0.4,1.8-1.1l1-2l1,2c0.3,0.7,1,1.1,1.8,1.1
+                      c0.8,0,1.5-0.4,1.8-1.1l2.5-5.1c0.4-0.9,0.1-1.9-0.8-2.3C22,18.1,20.9,18.5,20.5,19.4z" />
+                      <path d="M38.3,18.6c-0.9-0.4-1.9-0.1-2.3,0.8l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1c-0.8,0-1.5,0.4-1.8,1.1l-1,2L28,19.4
+                      c-0.4-0.9-1.5-1.2-2.3-0.8c-0.9,0.4-1.2,1.5-0.8,2.3l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1c0.8,0,1.5-0.4,1.8-1.1l1-2l1,2
+                      c0.3,0.7,1,1.1,1.8,1.1c0,0,0,0,0,0c0.8,0,1.5-0.4,1.8-1.1l2.5-5.1C39.6,20.1,39.2,19,38.3,18.6z" />
+                      <path d="M46.5,26l1-2l1,2c0.3,0.7,1,1.1,1.8,1.1s1.5-0.4,1.8-1.1l2.5-5.1c0.4-0.9,0.1-1.9-0.8-2.3c-0.9-0.4-1.9-0.1-2.3,0.8
+                      l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1c-0.8,0-1.5,0.4-1.8,1.1l-1,2l-1.2-2.4c-0.4-0.9-1.5-1.2-2.3-0.8c-0.9,0.4-1.2,1.5-0.8,2.3
+                      l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1C45.5,27.2,46.2,26.7,46.5,26z" />
+                      <path d="M58.4,7.8H5.6c-2.4,0-4.3,2-4.3,4.4v21.2c0,2.4,1.9,4.4,4.3,4.4h31.7c1,0,1.8-0.8,1.8-1.8s-0.8-1.8-1.8-1.8H5.6
+                      c-0.4,0-0.8-0.4-0.8-0.9V12.2c0-0.5,0.4-0.9,0.8-0.9h52.9c0.4,0,0.8,0.4,0.8,0.9v21.2c0,0.5-0.4,0.9-0.9,0.9c-1,0-1.8,0.8-1.8,1.8
+                      s0.8,1.8,1.8,1.8c2.4,0,4.4-2,4.4-4.4V12.2C62.8,9.8,60.8,7.8,58.4,7.8z" />
+                      <path d="M61.1,44.3L47,37.2c-1-0.5-2.1-0.4-2.9,0.4c-0.7,0.7-0.9,1.9-0.4,2.9l7.1,14.1c0.5,1,1.5,1.6,2.5,1.6c0,0,0,0,0.1,0
+                      c0.9,0,1.7-0.6,2.1-1.4l1.8-4.1l4.1-1.8c0.8-0.4,1.4-1.2,1.4-2.1C62.7,45.8,62.1,44.8,61.1,44.3z M54.6,48.1l-1.5,3.3l-4.8-9.6
+                      l9.6,4.8L54.6,48.1z" />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ab ak sm:a1M lg:a1M/3">
+          <div class="a3D  aZ wow fadeInUp a1W au a3E a21 a1v a1f a2G a1G a1H dark:a3F dark:a3" data-wow-delay="0s">
+            <div class="a2a a2c a1i" style="display: inline-block;
+                  width: 130px;
+                  height: 130px;
+                  background: url(https://th.bing.com/th/id/OIP.NB-IZl5lu0MQFdupCwhYWQHaHT?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+                  background-position: 50% 50%;
+                  background-size: cover;
+                  border-radius: 50%;"></div>
+            <div>
+              <h3 class="a3q a2s a1O aP a1k dark:aT"> Dnyan Ganga Education Trust's College of Education </h3>
+              <p class="a3q a2d aO a1R aQ dark:aS"> High School <br> (May 2019 - May 2020) </p>
+              <br>
+              <div class="a1N aa ac a1t a3G">
+                <a href="https://dgetcollege-edu.org/" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR"
+                  name="social-link" aria-label="social-link">
+                  <?xml version="1.0" encoding="utf-8"?>
+                  <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                  <svg class="a1B" width="20" height="20" version="1.1" id="lni_lni-website"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                    <g>
+                      <path d="M20.5,19.4l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1s-1.5,0.4-1.8,1.1l-1,2l-1.2-2.4c-0.4-0.9-1.5-1.2-2.3-0.8
+                      c-0.9,0.4-1.2,1.5-0.8,2.3l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1c0.8,0,1.5-0.4,1.8-1.1l1-2l1,2c0.3,0.7,1,1.1,1.8,1.1
+                      c0.8,0,1.5-0.4,1.8-1.1l2.5-5.1c0.4-0.9,0.1-1.9-0.8-2.3C22,18.1,20.9,18.5,20.5,19.4z" />
+                      <path d="M38.3,18.6c-0.9-0.4-1.9-0.1-2.3,0.8l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1c-0.8,0-1.5,0.4-1.8,1.1l-1,2L28,19.4
+                      c-0.4-0.9-1.5-1.2-2.3-0.8c-0.9,0.4-1.2,1.5-0.8,2.3l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1c0.8,0,1.5-0.4,1.8-1.1l1-2l1,2
+                      c0.3,0.7,1,1.1,1.8,1.1c0,0,0,0,0,0c0.8,0,1.5-0.4,1.8-1.1l2.5-5.1C39.6,20.1,39.2,19,38.3,18.6z" />
+                      <path d="M46.5,26l1-2l1,2c0.3,0.7,1,1.1,1.8,1.1s1.5-0.4,1.8-1.1l2.5-5.1c0.4-0.9,0.1-1.9-0.8-2.3c-0.9-0.4-1.9-0.1-2.3,0.8
+                      l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1c-0.8,0-1.5,0.4-1.8,1.1l-1,2l-1.2-2.4c-0.4-0.9-1.5-1.2-2.3-0.8c-0.9,0.4-1.2,1.5-0.8,2.3
+                      l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1C45.5,27.2,46.2,26.7,46.5,26z" />
+                      <path d="M58.4,7.8H5.6c-2.4,0-4.3,2-4.3,4.4v21.2c0,2.4,1.9,4.4,4.3,4.4h31.7c1,0,1.8-0.8,1.8-1.8s-0.8-1.8-1.8-1.8H5.6
+                      c-0.4,0-0.8-0.4-0.8-0.9V12.2c0-0.5,0.4-0.9,0.8-0.9h52.9c0.4,0,0.8,0.4,0.8,0.9v21.2c0,0.5-0.4,0.9-0.9,0.9c-1,0-1.8,0.8-1.8,1.8
+                      s0.8,1.8,1.8,1.8c2.4,0,4.4-2,4.4-4.4V12.2C62.8,9.8,60.8,7.8,58.4,7.8z" />
+                      <path d="M61.1,44.3L47,37.2c-1-0.5-2.1-0.4-2.9,0.4c-0.7,0.7-0.9,1.9-0.4,2.9l7.1,14.1c0.5,1,1.5,1.6,2.5,1.6c0,0,0,0,0.1,0
+                      c0.9,0,1.7-0.6,2.1-1.4l1.8-4.1l4.1-1.8c0.8-0.4,1.4-1.2,1.4-2.1C62.7,45.8,62.1,44.8,61.1,44.3z M54.6,48.1l-1.5,3.3l-4.8-9.6
+                      l9.6,4.8L54.6,48.1z" />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ab ak sm:a1M lg:a1M/3">
+          <div class="a3D  aZ wow fadeInUp a1W au a3E a21 a1v a1f a2G a1G a1H dark:a3F dark:a3" data-wow-delay="0s">
+            <div class="a2a a2c a1i" style="display: inline-block;
+                  width: 130px;
+                  height: 130px;
+                  background: url(https://th.bing.com/th/id/OIP.gy_1qudzewxoGcIwN8xSPwAAAA?w=134&h=150&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+                  background-color: #ffffff;
+                  background-position: 50% 50%;
+                  background-size: cover;
+                  border-radius: 50%;"></div>
+            <div>
+              <h3 class="a3q a2s a1O aP a1k dark:aT"> Arya Cambridge International School (IGCSE Board) </h3>
+              <p class="a3q a2d aO a1R aQ dark:aS">10th Pass Out <br> (July 2012 - May 2018) </p>
+              <br>
+              <div class="a1N aa ac a1t a3G">
+                <a href="https:/acis.org.in/" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link"
+                  aria-label="social-link">
+                  <?xml version="1.0" encoding="utf-8"?>
+                  <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                  <svg class="a1B" width="20" height="20" version="1.1" id="lni_lni-website"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                    <g>
+                      <path d="M20.5,19.4l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1s-1.5,0.4-1.8,1.1l-1,2l-1.2-2.4c-0.4-0.9-1.5-1.2-2.3-0.8
+                      c-0.9,0.4-1.2,1.5-0.8,2.3l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1c0.8,0,1.5-0.4,1.8-1.1l1-2l1,2c0.3,0.7,1,1.1,1.8,1.1
+                      c0.8,0,1.5-0.4,1.8-1.1l2.5-5.1c0.4-0.9,0.1-1.9-0.8-2.3C22,18.1,20.9,18.5,20.5,19.4z" />
+                      <path d="M38.3,18.6c-0.9-0.4-1.9-0.1-2.3,0.8l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1c-0.8,0-1.5,0.4-1.8,1.1l-1,2L28,19.4
+                      c-0.4-0.9-1.5-1.2-2.3-0.8c-0.9,0.4-1.2,1.5-0.8,2.3l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1c0.8,0,1.5-0.4,1.8-1.1l1-2l1,2
+                      c0.3,0.7,1,1.1,1.8,1.1c0,0,0,0,0,0c0.8,0,1.5-0.4,1.8-1.1l2.5-5.1C39.6,20.1,39.2,19,38.3,18.6z" />
+                      <path d="M46.5,26l1-2l1,2c0.3,0.7,1,1.1,1.8,1.1s1.5-0.4,1.8-1.1l2.5-5.1c0.4-0.9,0.1-1.9-0.8-2.3c-0.9-0.4-1.9-0.1-2.3,0.8
+                      l-1.2,2.4l-1-2c-0.3-0.7-1-1.1-1.8-1.1c-0.8,0-1.5,0.4-1.8,1.1l-1,2l-1.2-2.4c-0.4-0.9-1.5-1.2-2.3-0.8c-0.9,0.4-1.2,1.5-0.8,2.3
+                      l2.5,5.1c0.3,0.7,1,1.1,1.8,1.1C45.5,27.2,46.2,26.7,46.5,26z" />
+                      <path d="M58.4,7.8H5.6c-2.4,0-4.3,2-4.3,4.4v21.2c0,2.4,1.9,4.4,4.3,4.4h31.7c1,0,1.8-0.8,1.8-1.8s-0.8-1.8-1.8-1.8H5.6
+                      c-0.4,0-0.8-0.4-0.8-0.9V12.2c0-0.5,0.4-0.9,0.8-0.9h52.9c0.4,0,0.8,0.4,0.8,0.9v21.2c0,0.5-0.4,0.9-0.9,0.9c-1,0-1.8,0.8-1.8,1.8
+                      s0.8,1.8,1.8,1.8c2.4,0,4.4-2,4.4-4.4V12.2C62.8,9.8,60.8,7.8,58.4,7.8z" />
+                      <path d="M61.1,44.3L47,37.2c-1-0.5-2.1-0.4-2.9,0.4c-0.7,0.7-0.9,1.9-0.4,2.9l7.1,14.1c0.5,1,1.5,1.6,2.5,1.6c0,0,0,0,0.1,0
+                      c0.9,0,1.7-0.6,2.1-1.4l1.8-4.1l4.1-1.8c0.8-0.4,1.4-1.2,1.4-2.1C62.7,45.8,62.1,44.8,61.1,44.3z M54.6,48.1l-1.5,3.3l-4.8-9.6
+                      l9.6,4.8L54.6,48.1z" />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== Team Section end ===== -->
+  <!-- ===== Roadmap Section start ===== -->
+
+  <section id="experience" class="a3p dark:a2 af a2E aw[120px]" style="margin-top: -5rem;">
+    <div class="ae">
+      <div class="wow fadeInUp a3t a3C aH[590px] a2G md:a30" data-wow-delay="0s">
+        <div style="width:100%; height:100%">
+          <img style="margin-left: auto;
+          margin-right: auto; margin-bottom: 2rem;
+          display: block;" src="images/skills/work.svg" alt="logo" class="floating" width="35%" />
+        </div>
+        <span class="a3q a2d a2B a1P aR sm:a1O"> Roadmap </span>
+        <h2 class="a3q a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]"> Work Experience </h2>
+        <blockquote>
+          <p class="a3q a1O a1R aQ dark:aS"> The only source of knowledge is experience. <i> — Albert Einstein</i>
+          </p>
+        </blockquote>
+      </div>
+      <div class="ag aa a1t">
+        <div class="ab ak lg:a33/12 xl:a2N/12">
+          <div class="wow fadeInUp af ag aa a1L md:a3H lg:a3I" data-wow-delay="0s">
+            <span class="aq a8 a3J ao a2w aD[2px] a3 dark:a1w[#2D2C4A] md:a3K/2 md:an"></span>
+
+            <!-- Experience - YBI Foundation: Data Scientist -->
+            <div class="ab ak md:a1M/2">
+              <div
+                class=" a1H dark:a3F a3E a3D a2G a1G hover:a1H  dark:a3 af a2E a1W au a1v a3L aI dark:a3 md:a2k md:a1Q lg:a20">
+                <span
+                  class="aq as/2 a1a ao a3M a1U at/2 a1u a3N a1H a1 dark:a3F dark:a3 md:a3b md:a3O md:an lg:a3P"></span>
+                <span class="aq a3Q as/2 ao a3e a3f at/2 az a1v dark:a3 md:an"></span>
+                <div class="a2c a1i" style="display: inline-block; margin-bottom: -20px;
+                      width: 100px;
+                      height: 100px;
+                      background: url(https://th.bing.com/th/id/OIP.IlMu6n4BWL58GLDXpkIguAAAAA?w=139&h=150&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+                      background-position: 50% 50%;
+                      background-size: cover;
+                      border-radius: 50%;">
+                </div>
+                <article>
+                  <div class="read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;"
+                    data-rm-words="40">
+                    <h6 class="a3q a2G a2B a1P a1k dark:aT"> YBI Foundations </h6>
+                    <h6 class="a3q a2G aR a1O a1P a1k dark:a3R"> Data Scientist Intern </h6>
+                    <p class="a2s a3q a2G a1F aP aQ dark:aS">
+                      <i>(Feb'23 - Present)</i>
+                    </p>
+                    <ul style="list-style-type: square;" class="a3q a3S a1F  a1R aQ dark:aS">
+                      <li>Designs and implements scalable and reliable machine learning (ML) systems used to develop,
+                        test, and deploy machine learning models.</li>
+                      <li>Leverages technologies and platforms to support reproducible feature engineering and optimized
+                        machine learning model deployment at scale.</li>
+                      <li>Partners with data scientists and IT data engineers to understand business priorities, frame
+                        machine learning problems, and architect machine learning solutions.</li>
+                      <li>Ensures data quality throughout all stages of acquisition and processing, including data
+                        sourcing/collection, ground truth generation, normalization, and transformation.</li>
+                      <li>Identifies gaps and evaluates relevant tools and cloud computing technologies as needed to
+                        improve machine learning processes and build effective solutions.</li>
+                      <br>
+                      <div class="ao dark:an">
+                        <p style="color:#E4F995">Technology Stack: Python, Snowflake, Amazon AWS, SQL.
+                        </p>
+                      </div>
+                      <div class="dark:ao">
+                        <p style="color:#F56297">Technology Stack: Python, Snowflake, Amazon AWS, SQL.
+                        </p>
+                      </div>
+
+                    </ul>
+                  </div>
+                </article>
+                <div class="a1N aa ac a1t a3G">
+                  <img src="images/skills/python.svg" width="30" height="30">
+                  <img src="images/skills/r.svg" width="30" height="30">
+                  <img src="images/skills/sql.png" width="30" height="30">
+                  <img src="images/skills/snowflake.png" width="30" height="30">
+                  <img src="images/skills/aws.png" width="30" height="30">
+                </div>
+              </div>
+            </div>
+
+            <div class="ab ak md:a1M/2"></div>
+            <div class="ab ak md:a1M/2"></div>
+
+            <!-- Experience - VIEH Group: ML Engineer -->
+            <div class="ab ak md:a1M/2">
+              <div class="a1H dark:a3F a3E a3D af a2E a1W au a1v a3L aI dark:a3 md:a2O md:a1Q lg:a3T">
+                <span
+                  class="aq as/2 a1a ao a3M a1U at/2 a1u a3N a1H a1 dark:a3F dark:a3 md:a3U md:a3V md:an lg:a3W"></span>
+                <span class="aq a3X as/2 ao a3e a3f at/2 az a1v dark:a3 md:an"></span>
+                <div style="margin-top:auto; margin-bottom:auto;text-align:center;">
+                  <div class="a2c a1i" style="display: inline-block; margin-bottom: -20px;
+                        width: 100px;
+                        height: 100px;
+                        background: url(https://th.bing.com/th/id/OIP.WXoR7GRBtClf_h86vzmaAAHaBc?w=329&h=68&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                </div>
+                <article>
+                  <div class="read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;"
+                    data-rm-words="40">
+                    <h6 class="a3q a2G a2B a1P a1k dark:aT"> VIEH Group </h6>
+                    <h6 class="a3q a2G aR a1O a1P a1k dark:a3R"> ML Engineer </h6>
+                    <p class="a2s a3q a2G a1F aP aQ dark:aS">
+                      <i>(Dec'22 - Jan'23)</i>
+                    </p>
+                    <ul style="list-style-type: square;" class="a3q a3S a1F  a1R aQ dark:aS">
+                      <li>Build ML models for production use.</li>
+                      <li>Perform in-depth exploratory data analysis to scope ML opportunities, identify potential
+                        issues in the data, and lay the groundwork for model design, training & evaluation strategies.
+                      </li>
+                      <li> Suggest and implement new features to improve model performance and business logic.</li>
+                      <li>Build scalable machine learning models for claim time series forecasting and NLP text
+                        understanding.</li>
+                      <li>Continue to grow and learn in the data & ML space with a focus on business problems that
+                        require making sense of large-scale structured and unstructured datasets.</li>
+                      <br>
+                      <div class="ao dark:an">
+                        <p style="color:#E4F995">Technology Stack: Python, Tensorflow, PyTorch, BigQuery,
+                          Vertex AI, GCP, Spark.</p>
+                      </div>
+                      <div class="dark:ao">
+                        <p style="color:#F56297">Technology Stack: Python, Tensorflow, PyTorch, BigQuery,
+                          Vertex AI, GCP, Spark.</p>
+                      </div>
+
+
+                    </ul>
+                  </div>
+                </article>
+                <div class="a1N aa ac a1t a3G">
+                  <img src="images/skills/python.svg" width="30" height="30">
+                  <img src="images/skills/tf.svg" width="30" height="30">
+                  <img src="images/skills/dagster.jpeg" width="30" height="30">
+                  <img src="images/skills/docker.svg" width="30" height="30">
+                  <img src="images/skills/kubernetes.svg" width="30" height="30">
+                  <img src="images/skills/bigquery.svg" width="30" height="30">
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience - EduLaddr -->
+            <div class="ab ak md:a1M/2">
+              <div class=" a1H dark:a3F a3E a3D af a2E a1W au a1v a3L aI dark:a3 md:a2k md:a1Q md:a2L lg:a20">
+                <span
+                  class="aq as/2 a1a ao a3M a1U at/2 a1u a3N a1H a1 dark:a3F dark:a3 md:a3b md:a3O md:an lg:a3P"></span>
+                <span class="aq a3Q as/2 ao a3e a3f at/2 az a1v dark:a3 md:an"></span>
+                <div style="margin-top:auto; margin-bottom:auto;text-align:center;">
+                  <div class="a2c a1i" style="display: inline-block; margin-bottom: -20px;
+                      width: 100px;
+                      height: 100px;
+                      background: url(https://th.bing.com/th/id/OIP.K30UQRIPvAybn5Iz7PLLagHaHa?w=150&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+                      background-position: 50% 50%;
+                      background-size: cover;
+                      border-radius: 50%;"></div>
+                </div>
+                <article>
+                  <div class="read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;"
+                    data-rm-words="40">
+                    <h6 class="a3q a2G a2B a1P a1k dark:aT"> EduLaddr </h6>
+                    <h6 class="a3q a2G a1O a1P aR"> C++ Trainee </h6>
+                    <p class="a2s a3q a2G a1F aP aQ dark:aS">
+                      <i>(June'22 - July'22)</i>
+                    </p>
+                    <ul style="list-style-type: square; justify-items: stretch;" class="a3q a3S a1F  a1R aQ dark:aS">
+                      <li>Demonstrating a solid understanding of C++ programming concepts and best practices.</li>
+                      <li>Collaborating with the development team to design, develop, and test software applications.
+                      </li>
+                      <li> Participating in daily scrum meetings and providing status updates on tasks and projects.
+                      </li>
+                      <br>
+                      <div class="ao dark:an">
+                        <p style="color:#E4F995">Technology Stack: C++</p>
+                      </div>
+                      <div class="dark:ao">
+                        <p style="color:#F56297">Technology Stack: C++</p>
+                      </div>
+                    </ul>
+                  </div>
+                </article>
+                <div class="a1N aa ac a1t a3G">
+                </div>
+              </div>
+            </div>
+            <div class="ab ak md:a1M/2"></div>
+            <div class="ab ak md:a1M/2"></div>
+
+            <div class="aq a1a a2J a2Z">
+              <img src="images/shapes/timeline.svg" alt="shape" />
+            </div>
+  </section>
+  <!-- ===== Roadmap Section end ===== -->
+  <!-- Projects -->
+  <section id="projects" section class="a3p a1J[120px] a1T dark:a2" style="margin-top: -8rem;">
+    <div class="ae">
+      <div class="wow fadeInUp a3t a3C aH[590px] a2G md:a30" data-wow-delay="0s">
+        <span class="a3q a2d a2B a1P aR sm:a1O"> Projects </span>
+        <h2 class="a3q a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]"> </h2>
+        <blockquote>
+          <p class="a3q a1O a1R aQ dark:aS"> Life is 10% what happens to you and 90% how you work for it. <i> — Charles
+              R. Swindoll</i>
+          </p>
+        </blockquote>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="customers-testimonials" class="owl-carousel">
+            <!--TESTIMONIAL 1 -->
+            <div
+              class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40"
+              data-wow-delay="0s">
+              <div class="aq a19 a8 a2I[-1] a3_[10px]">
+                <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+              </div>
+              <div class="shadow-effect">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                </div>
+                <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                  <a href="https://www.linkedin.com/in/byron-ruth/)" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR"
+                    name="social-link" aria-label="social-link">
+                    <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4E03AQFiEgaFlt1TDQ/profile-displayphoto-shrink_400_400/0/1658759362429?e=1678320000&v=beta&t=6LJbf5wWqg7TtYpvYmPV-Z66ky7FU0C3ja5LfpQubGs);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                  </a>
+                </div>
+                <h6 class="a3q a2G a2B a1P a1k dark:aT"> Diabetic Retinopathy</h6>
+                <h6 class="a3q a2G a1O a1P a1k dark:aT"> Semester 6 to final year project</h6>
+                <h6 class="a3q a2G a41 a1P aR dark:aR"> NHITM</h6>
+                <article>
+                  <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;"
+                    data-rm-words="30">
+                    <p class="a3q a1F a1R a2f aQ dark:aS"> “Diabetic retinopathy is a common complication of diabetes
+                      that affects the eyes and can lead to vision loss if not detected and managed early. Machine
+                      learning algorithms, such as Random Forest, Support Vector Machine (SVM), and k-Nearest Neighbors
+                      (k-NN), can be used to classify diabetic retinopathy based on input features.” </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 1 -->
+            <!--TESTIMONIAL 2 -->
+            <div
+              class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40"
+              data-wow-delay="0s">
+              <div class="aq a19 a8 a2I[-1]">
+                <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+              </div>
+              <div class="shadow-effect">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                </div>
+                <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                  <a href="https://www.linkedin.com/in/harivony-rakotoarivelo-32214219/)"
+                    class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4E03AQHuA_vat-g3gA/profile-displayphoto-shrink_400_400/0/1599246157511?e=1678320000&v=beta&t=ZzgiJHEz2EYaBeZSxAY0QgOWThy79kwVujDicWzhZ5M);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                  </a>
+                </div>
+                <h6 class="a3q a2G a2B a1P a1k dark:aT"> Uber Data Analysis </h6>
+                <h6 class="a3q a2G a1O a1P a1k dark:aT"> Using Python </h6>
+                <h6 class="a3q a2G a41 a1P aR dark:aR"> Great Learning </h6>
+                <article>
+                  <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;"
+                    data-rm-words="30">
+                    <p class="a3q a1F a1R a2f aQ dark:aS"> “Python can be used for analyzing Uber's massive data to gain
+                      insights into their business operations. After obtaining the data, it can be imported into Python
+                      and cleaned. Exploratory data analysis can be performed to identify patterns or trends.
+                      Statistical techniques and machine learning algorithms can be applied to build predictive models
+                      or make data-driven decisions. The results can be visualized using libraries like Matplotlib and
+                      Seaborn.” </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 2-->
+            <!--TESTIMONIAL 3 -->
+            <div
+              class=" a1H dark:a3F a3E a3D  a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40"
+              data-wow-delay="0s">
+              <div class="aq a19 a8 a2I[-1]">
+                <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+              </div>
+              <div class="shadow-effect">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                </div>
+                <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                  <a href="https://www.linkedin.com/in/naomi-s-354a466/)"
+                    class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4D03AQG56y3Qq3A0lw/profile-displayphoto-shrink_400_400/0/1642190544500?e=1678320000&v=beta&t=cuc2pCbAieY6G1BYg0JTu_tQvsi6GLKJ81RDJl7y_aU);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                  </a>
+                </div>
+                <h6 class="a3q a2G a2B a1P a1k dark:aT"> Fake News Detection </h6>
+                <h6 class="a3q a2G a1O a1P a1k dark:aT"> Using Machine Learning</h6>
+                <h6 class="a3q a2G a41 a1P aR dark:aR"> Great Learning </h6>
+                <article>
+                  <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;"
+                    data-rm-words="30">
+                    <p class="a3q a1F a1R a2f aQ dark:aS"> “Fake News Detection using logistic regression involves
+                      training a model to identify fake news articles based on features like sensational language,
+                      source credibility, and social media engagement. The process includes collecting and preprocessing
+                      data, selecting relevant features, and training the logistic regression model. Evaluation is done
+                      using metrics like accuracy, precision, recall, and F1-score to measure the effectiveness of the
+                      model in identifying fake news articles. ” </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 3-->
+            <!--TESTIMONIAL 4 -->
+            <div
+              class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40"
+              data-wow-delay="0s">
+              <div class="aq a19 a8 a2I[-1]">
+                <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+              </div>
+              <div class="shadow-effect">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                </div>
+                <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                  <a href="https://www.linkedin.com/in/natalievarrialekasana/)"
+                    class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4E03AQGlEFdvl9WnUw/profile-displayphoto-shrink_400_400/0/1559182146426?e=1678320000&v=beta&t=h93MIW3WbVfhHbGJOP_UjW0UMyNpBh1xBu6HYzHflbw);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                  </a>
+                </div>
+                <h6 class="a3q a2G a2B a1P a1k dark:aT"> EDA For </h6>
+                <h6 class="a3q a2G a1O a1P a1k dark:aT"> Top 10 Indian food analysis </h6>
+                <h6 class="a3q a2G a41 a1P aR dark:aR"> Great Learning </h6>
+                <article>
+                  <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;"
+                    data-rm-words="30">
+                    <p class="a3q a1F a1R a2f aQ dark:aS"> “Exploratory data analysis (EDA) for Top 10 Indian food
+                      analysis involves analyzing the data related to the popularity and preferences of Indian cuisine.
+                      The data can be collected from various sources such as online surveys, food delivery apps,
+                      restaurant reviews, and social media platforms. The results of the EDA can be summarized and
+                      presented in a report, which could include insights and recommendations for businesses in the food
+                      industry, such as restaurant owners and food delivery companies. ”
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 4-->
+            <!--TESTIMONIAL 5 -->
+            <div
+              class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40"
+              data-wow-delay="0s">
+              <div class="aq a19 a8 a2I[-1]">
+                <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+              </div>
+              <div class="shadow-effect">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                </div>
+                <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                  <a href="https://www.linkedin.com/in/oude-gao-338784104/)"
+                    class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C5603AQHavYH8SbLVNw/profile-displayphoto-shrink_400_400/0/1549296769992?e=1678320000&v=beta&t=eAnEy2N0CTTIdT0Fd7CBWq2HIDQcMwJ4nIucx2uid9g);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                  </a>
+                </div>
+                <h6 class="a3q a2G a2B a1P a1k dark:aT"> Student Grade</h6>
+                <h6 class="a3q a2G a1O a1P a1k dark:aT"> Prediction Model </h6>
+                <h6 class="a3q a2G a41 a1P aR dark:aR"> Great Learning </h6>
+                <article>
+                  <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;"
+                    data-rm-words="30">
+                    <p class="a3q a1F a1R a2f aQ dark:aS"> “Student grade prediction using linear regression is a
+                      machine learning technique that involves training a linear regression model to predict student
+                      grades based on various features such as attendance, study hours, and previous exam scores. The
+                      process begins with the collection and preprocessing of data, which typically involves obtaining
+                      student data from various sources and removing any irrelevant information. The next step involves
+                      selecting relevant features and extracting them from the preprocessed data. Once the data has been
+                      preprocessed and the features have been selected, the linear regression model can be trained on
+                      the data. The model learns to predict student grades based on the selected features. To evaluate
+                      the performance of the linear regression model, metrics such as mean squared error and R-squared
+                      can be used. These metrics help to measure the effectiveness of the model in predicting student
+                      grades accurately.” </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 5-->
+            <!--TESTIMONIAL 6 -->
+            <div
+              class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40"
+              data-wow-delay="0s">
+              <div class="aq a19 a8 a2I[-1]">
+                <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+              </div>
+              <div class="shadow-effect">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                </div>
+                <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                  <a href="https://www.linkedin.com/in/richard-dewald-7703904/)"
+                    class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4E03AQGKp-Rc4wM23Q/profile-displayphoto-shrink_400_400/0/1517683887821?e=1678320000&v=beta&t=E5A6UP8LyJlgnNurDvfxAKE-0SRVI9edDn8x96BcLlw);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                  </a>
+                </div>
+                <h6 class="a3q a2G a2B a1P a1k dark:aT"> Salary Prediction </h6>
+                <h6 class="a3q a2G a1O a1P a1k dark:aT"> Based on Expeience </h6>
+                <h6 class="a3q a2G a41 a1P aR dark:aR"> Personal Projectk </h6>
+                <article>
+                  <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;"
+                    data-rm-words="30">
+                    <p class="a3q a1F a1R a2f aQ dark:aS"> “Salary prediction based on experience using linear
+                      regression
+                      is a machine learning technique that involves training a linear regression model to predict the
+                      salary of an individual based on their years of experience. The process begins with collecting and
+                      preprocessing data, which includes information on individuals' salaries and their years of
+                      experience in their respective fields. Next, the data is split into training and testing datasets,
+                      and the linear regression model is trained on the training dataset to learn the relationship
+                      between experience and salary. The trained model is then used to predict the salaries of
+                      individuals in the testing dataset based on their years of experience. Finally, the performance of
+                      the model is evaluated using metrics such as mean squared error and root mean squared error to
+                      determine its accuracy in predicting salaries based on experience.” </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 6-->
+            <!--TESTIMONIAL 7 -->
+            <div
+              class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40"
+              data-wow-delay="0s">
+              <div class="aq a19 a8 a2I[-1]">
+                <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+              </div>
+              <div class="shadow-effect">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                </div>
+                <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                  <a href="https://www.linkedin.com/in/soy-chen-40a16932/)"
+                    class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C5603AQEaWljEzLb_GA/profile-displayphoto-shrink_400_400/0/1615096820387?e=1678320000&v=beta&t=8YIlSdnlGGKiHcyzzg146fg6_zoLATx_45bU4Axhhmo);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                  </a>
+                </div>
+                <h6 class="a3q a2G a2B a1P a1k dark:aT"> Diabetes Prediction on  </h6>
+                <h6 class="a3q a2G a1O a1P a1k dark:aT"> Pima Indians Database using Naive Bayes </h6>
+                <h6 class="a3q a2G a41 a1P aR dark:aR"> Great Learning </h6>
+                <article>
+                  <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;"
+                    data-rm-words="30">
+                    <p class="a3q a1F a1R a2f aQ dark:aS"> “Diabetes Prediction on Pima Indians Diabetes Database using
+                      Naive Bayes is a machine learning technique that involves training a Naive Bayes model to predict
+                      the onset of diabetes in Pima Indian women based on various features such as age, BMI, and blood
+                      pressure. The process begins with the collection and preprocessing of data, which typically
+                      involves removing any missing or erroneous data. The next step involves selecting relevant
+                      features and extracting them from the preprocessed data. Once the data has been preprocessed and
+                      the features have been selected, the Naive Bayes model can be trained on the data. The model
+                      learns to predict the likelihood of a woman having diabetes based on the selected features. To
+                      evaluate the performance of the Naive Bayes model, metrics such as accuracy, precision, recall,
+                      and F1-score can be used. These metrics help to measure the effectiveness of the model in
+                      correctly identifying the onset of diabetes.” </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 7-->
+            <!--TESTIMONIAL 8 -->
+            <div
+              class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40"
+              data-wow-delay="0s">
+              <div class="aq a19 a8 a2I[-1]">
+                <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+              </div>
+              <div class="shadow-effect">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                </div>
+                <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                  <a href="https://www.linkedin.com/in/shengqiang-chen-879337a7/)"
+                    class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C4E03AQGnkDZEbstH1g/profile-displayphoto-shrink_400_400/0/1517461585912?e=1678320000&v=beta&t=UORiq7fX5T-Sc-hWDlweYVy2t-NkkybkSa1hAljvjHI);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                  </a>
+                </div>
+                <h6 class="a3q a2G a2B a1P a1k dark:aT"> Credit Card </h6>
+                <h6 class="a3q a2G a1O a1P a1k dark:aT"> Fraud Detection </h6>
+                <h6 class="a3q a2G a41 a1P aR dark:aR"> Personal Project </h6>
+                <article>
+                  <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;"
+                    data-rm-words="30">
+                    <p class="a3q a1F a1R a2f aQ dark:aS"> “Credit card fraud detection using logistic regression is a
+                      machine learning technique that involves training a logistic regression model to identify
+                      fraudulent credit card transactions based on various features such as transaction amount,
+                      location, and time. The process begins with the collection and preprocessing of data, which
+                      typically involves collecting transaction data from various sources and removing any irrelevant
+                      information. The next step involves selecting relevant features and extracting them from the
+                      preprocessed data. Once the data has been preprocessed and the features have been selected, the
+                      logistic regression model can be trained on the data. The model learns to predict whether a credit
+                      card transaction is fraudulent or genuine based on the selected features. To evaluate the
+                      performance of the logistic regression model, metrics such as accuracy, precision, recall, and
+                      F1-score can be used. These metrics help to measure the effectiveness of the model in correctly
+                      identifying fraudulent credit card transactions.” </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 8-->
+            <!--TESTIMONIAL 9 -->
+            <div
+              class=" a1H dark:a3F a3E a3D a1v item wow fadeInUp af a2E a1W a1H a3_[10px] a1 aI a3L dark:a3 sm:a40 md:a29 xl:a40"
+              data-wow-delay="0s">
+              <div class="aq a19 a8 a2I[-1]">
+                <img src="images/shapes/testimonial-shape.svg" alt="shape" width="100%" height="90%" />
+              </div>
+              <div class="shadow-effect">
+                <div class="aq a19 a8 a2I[-1]">
+                  <img src="images/shapes/testimonial-shape.svg" alt="shape" />
+                </div>
+                <div style="display: flex;justify-content: center;align-items: center;" class="a2n aa ac">
+                  <a href="https://www.linkedin.com/in/suryavadlamani/)"
+                    class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" name="social-link" aria-label="social-link">
+                    <div class=" a2c a1i" style="display: inline-block;margin-bottom: -20px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(https://media.licdn.com/dms/image/C5603AQFjOgW-6lc5DA/profile-displayphoto-shrink_400_400/0/1652406744220?e=1678320000&v=beta&t=TY4kd0QWOgtbWftXnILAEbnq4VxuZF9AKLxnLVp7aVw);
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        border-radius: 50%;"></div>
+                  </a>
+                </div>
+                <h6 class="a3q a2G a2B a1P a1k dark:aT"> COVID_19 Analysis </h6>
+                <h6 class="a3q a2G a1O a1P a1k dark:aT"> Using Random Forest </h6>
+                <h6 class="a3q a2G a41 a1P aR dark:aR"> Personal Project </h6>
+                <article>
+                  <div class="a3q read-more js-read-more" style="margin-top:auto; margin-bottom:auto;text-align:left;"
+                    data-rm-words="30">
+                    <p class="a3q a1F a1R a2f aQ dark:aS"> “Random Forest is a machine learning algorithm that can be
+                      used for COVID-19 analysis in India. It involves training a model to predict the number of
+                      COVID-19 cases based on various factors such as age, gender, location, and travel history. The
+                      model uses an ensemble of decision trees to make predictions, which helps to improve accuracy and
+                      reduce overfitting. The process typically involves data collection and preprocessing, feature
+                      engineering, and model training and evaluation. The results of the analysis can be used to
+                      identify high-risk areas and inform public health policies and interventions.” </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 9-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End Testimonial Section -->
+  <!-- ===== Contact Section start ===== -->
+  <section id="contact" class="a3p aw[120px] dark:a2" style="margin-top: -7rem;">
+    <div class="ae">
+      <div style="width:100%; height:100%">
+        <img style="margin-left: auto;
+          margin-right: auto; margin-bottom: 3rem;
+          display: block;" src="images/contact/contact-hero.png" alt="logo" class="floating" width="45%" />
+      </div>
+      <div class="wow fadeInUp a3t a3C aH[590px] a2G md:a30" data-wow-delay="0s">
+        <span class="a3q a2d a2B a1P aR sm:a1O"> Contact me </span>
+        <h2 class="a3q a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]"> Get in touch with me </h2>
+      </div>
+      <!-- <div class="ag aa a1L ac"> -->
+      <!-- <div class="ab ak lg:a44/12"><div
+              class="wow fadeInUp a2s aH[620px] "
+              data-wow-delay="0s"
+            ><img
+            src="images/contact/contact.svg"
+            alt="logo"
+            
+            /></div></div> -->
+      <div class="ab ak lg:a1U/12 ac" style="margin: auto">
+        <div class=" a1H dark:a3F a3E a3D sm:a45 wow fadeInUp a1X a1 a46 a1E dark:a3" data-wow-delay="0s">
+          <img src="images/logo/avatar.png" alt="logo" class="ac" />
+
+          <div class="a3u a1W aa a1L ac a1t sm:a3v">
+            <div class="aZ af a3w a3x sm:a3y">
+              <a href="https://twitter.com/Akshay209012087/" name="social icon" aria-label="social icon">
+                <img src="images/social/twitter.svg">
+              </a>
+            </div>
+            <div class="aZ af a3w a3x sm:a3y">
+              <a href="https://www.linkedin.com/in/akshay-panchal8702/" name="social icon" aria-label="social icon">
+                <img src="images/social/linkedin.svg">
+              </a>
+            </div>
+            <div class="aZ af a3w a3x sm:a3y">
+              <a href="https://github.com/AK270802" name="social icon" aria-label="social icon">
+                <img src="images/social/github.svg">
+              </a>
+            </div>
+            <div class="aZ af a3w a3x sm:a3y">
+              <a href="mailto:avpdazzler2708@gmail.com" name="social icon" aria-label="social icon">
+                <img src="images/social/gmail.svg">
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- ===== Contact Section end ===== -->
+  <div class="wow fadeInUp a37 a2G a3p dark:a2" data-wow-delay="0s">
+    <div class="ao dark:an">
+      <p style="text-align: center;
+          color: #E4F995;
+          font-family: 'BeautyDemo';
+          font-size: 30px;" class="a1F a1R a47 aQ dark:aS"> Developed by Akshay V Panchal </p>
+    </div>
+
+    <div>
+      <p style="text-align: center;
+    color: #F56297;
+    font-family: 'BeautyDemo';
+    font-size: 30px;" class="dark:ao a1F a1R a47 aQ dark:aS"> Developed by Akshay V Panchal </p>
+    </div>
+  </div>
+  </div>
+  <div class="aq a8 a1a a2Z">
+    <img src="images/shapes/footer-shape-2.svg" alt="shape" />
+  </div>
+  <div class="aq a2J a19 a2Z">
+    <img src="images/shapes/footer-shape-1.svg" alt="shape" />
+  </div>
+  </footer>
+  <!-- ===== Footer end ===== -->
+  <!-- ====== Back To Top Start -->
+  <a x-show="scrolledFromTop" href="javascript:void(0)" name="scrollToTop" aria-label="scrollToTop"
+    class="hover:a38 back-to-top ad a39 a3a a3b a2I[999] aa a32 a33 ac a1t au a1A aT a3c a3d">
+    <span class="a10[6px] a3e a3f az a36 a3g a1I"></span>
+  </a>
+  <!-- ====== Back To Top End -->
+  <!-- ===== JS Files ====== -->
+  <script src="js/apexcharts.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // ==== for menu scroll
+    const pageLink = document.querySelectorAll(".scroll-menu");
+    pageLink.forEach((elem) => {
+      elem.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(elem.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+          offsetTop: 1 - 60,
+        });
+      });
+    });
+    // section menu active
+    function onScroll(event) {
+      const sections = document.querySelectorAll(".scroll-menu");
+      const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      for (let i = 0; i < sections.length; i++) {
+        const currLink = sections[i];
+        const val = currLink.getAttribute("href");
+        const refElement = document.querySelector(val);
+        const scrollTopMinus = scrollPos + 73;
+        if (refElement.offsetTop <= scrollTopMinus && refElement.offsetTop + refElement.offsetHeight > scrollTopMinus) {
+          document.querySelector(".scroll-menu").classList.remove("dark:aT", "aR");
+          currLink.classList.add("dark:aT", "aR");
+        } else {
+          currLink.classList.remove("dark:aT", "aR");
+        }
+      }
+    }
+    window.document.addEventListener("scroll", onScroll);
+    // ====
+    var options = {
+      series: [73, 55, 38, 20],
+      chart: {
+        type: "donut",
+        width: 400,
+      },
+      colors: ["#2347B9", "#3363FF", "#8BA6FF", "#8696CA"],
+      legend: {
+        show: false,
+      },
+      stroke: {
+        show: false,
+      },
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom",
+          },
+        },
+      },],
+    };
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+  </script>
+  <script>
+    /**
+     *  Read More JS
+     *  truncates text via specfied character length with more/less actions.
+     *  Maintains original format of pre truncated text.
+     *  @author stephen scaff
+     *  @todo   Add destroy method for ajaxed content support.
+     *
+     */
+    const ReadMore = (() => {
+      let s;
+      return {
+        settings() {
+          return {
+            content: document.querySelectorAll('.js-read-more'),
+            originalContentArr: [],
+            truncatedContentArr: [],
+            moreLink: "Read Description",
+            lessLink: "Collapse",
+          }
+        },
+        init() {
+          s = this.settings();
+          this.bindEvents();
+        },
+        bindEvents() {
+          ReadMore.truncateText();
+        },
+        /**
+         * Count Words
+         * Helper to handle word count.
+         * @param {string} str - Target content string.
+         */
+        countWords(str) {
+          return str.split(/\s+/).length;
+        },
+        /**
+         * Ellpise Content
+         * @param {string} str - content string.
+         * @param {number} wordsNum - Number of words to show before truncation.
+         */
+        ellipseContent(str, wordsNum) {
+          return str.split(/\s+/).slice(0, wordsNum).join(' ') + '...';
+        },
+        /**
+         * Truncate Text
+         * Truncate and ellipses contented content
+         * based on specified word count.
+         * Calls createLink() and handleClick() methods.
+         */
+        truncateText() {
+          for (let i = 0; i < s.content.length; i++) {
+            //console.log(s.content)
+            const originalContent = s.content[i].innerHTML;
+            const numberOfWords = s.content[i].dataset.rmWords;
+            const truncateContent = ReadMore.ellipseContent(originalContent, numberOfWords);
+            const originalContentWords = ReadMore.countWords(originalContent);
+            s.originalContentArr.push(originalContent);
+            s.truncatedContentArr.push(truncateContent);
+            if (numberOfWords < originalContentWords) {
+              s.content[i].innerHTML = s.truncatedContentArr[i];
+              let self = i;
+              ReadMore.createLink(self)
+            }
+          }
+          ReadMore.handleClick(s.content);
+        },
+        /**
+         * Create Link
+         * Creates and Inserts Read More Link
+         * @param {number} index - index reference of looped item
+         */
+        createLink(index) {
+          const linkWrap = document.createElement('span');
+          linkWrap.className = 'read-more__link-wrap';
+          linkWrap.innerHTML = `
+																																																				<div style="width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;">
+																																																					<a id="read-more_${index}"
+                                class="a3q read-more__link a1u a2 a22 a1E a1F aT hover:a2X dark:a1A  dark:hover:bg-opacity-90"
+                                style="margin-top:2rem;
+                                display: inline-block;
+                                font-size: 16px;cursor:pointer;">
+                                ${s.moreLink}
+                            </a>
+																																																				</div>`;
+          // Inset created link
+          s.content[index].parentNode.insertBefore(linkWrap, s.content[index].nextSibling);
+        },
+        /**
+         * Handle Click
+         * Toggle Click eve
+         */
+        handleClick(el) {
+          const readMoreLink = document.querySelectorAll('.read-more__link');
+          for (let j = 0, l = readMoreLink.length; j < l; j++) {
+            readMoreLink[j].addEventListener('click', function () {
+              const moreLinkID = this.getAttribute('id');
+              let index = moreLinkID.split('_')[1];
+              el[index].classList.toggle('is-expanded');
+              if (this.dataset.clicked !== 'true') {
+                el[index].innerHTML = s.originalContentArr[index];
+                this.innerHTML = s.lessLink;
+                this.dataset.clicked = true;
+              } else {
+                el[index].innerHTML = s.truncatedContentArr[index];
+                this.innerHTML = s.moreLink;
+                this.dataset.clicked = false;
+              }
+            });
+          }
+        },
+        /**
+         * Open All
+         * Method to expand all instances on the page.
+         * Will probably be useful with a destroy method.
+         */
+        openAll() {
+          const instances = document.querySelectorAll('.read-more__link');
+          for (let i = 0; i < instances.length; i++) {
+            content[i].innerHTML = s.truncatedContentArr[i];
+            instances[i].innerHTML = s.moreLink;
+          }
+        }
+      }
+    })();
+    //export default ReadMore;
+    ReadMore.init();
+  </script>
+  <script>
+    $(document).ready(function ($) {
+      "use strict";
+      //  TESTIMONIALS CAROUSEL HOOK
+      $('#customers-testimonials').owlCarousel({
+        loop: true,
+        center: true,
+        items: 3,
+        margin: 0,
+        autoplay: true,
+        dots: true,
+        autoplayTimeout: 8500,
+        smartSpeed: 450,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          1170: {
+            items: 3
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
