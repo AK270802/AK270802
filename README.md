@@ -3,6 +3,7 @@
   And to accept the challenges and utilize my education more meaningfully in the sphere
 of technology and work hard towards achieving the goals of the organization. <br> Currently working on Algorithm Visualizer. I live in Mumbai, Maharastra, India 🇮🇳. 
 <br>🙌 I'm a geek, tech enthusiast, soccer fan.</p></h4>
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="9a582d9c-d133-437c-b526-107511295855" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 <h3 align="center">Let's Get Connected</h3>
 
