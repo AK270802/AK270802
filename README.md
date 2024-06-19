@@ -1,7 +1,7 @@
 ![](https://github.com/AK270802/AK270802/blob/master/32a0091e-4c80-464a-96a6.png)
 
 # <h1 align="center">Hi, I'm Akshay</h1>
-### < h2 align="center">Machine Learning Expert | Data Science Enthusiast | Data Analyst</h2>
+### <h2 align="center">Machine Learning Expert | Data Science Enthusiast | Data Analyst</h2>
 
 <h4 align="center">An expert in designing and refining machine learning algorithms, ready to accept challenges and utilize my education in the technology sphere. Currently working on Algorithm Visualizer. I live in Mumbai, Maharashtra, India 🇮🇳.<br>🙌 I'm a geek, tech enthusiast, and soccer fan.</h4>
 
