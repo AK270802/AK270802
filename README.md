@@ -1,8 +1,7 @@
 ![](https://github.com/AK270802/AK270802/blob/master/32a0091e-4c80-464a-96a6.png)
-# Akshay Vijay Panchal
+# Welcome to my GitHub profile! 
 ### Machine Learning Expert | Data Science Enthusiast | Data Analyst
 
-Welcome to my GitHub profile! 
 <h1 align="center">Hi, I'm Akshay</h1>
 <h4>An expert in designing and refining machine learning algorithms.
   And to accept the challenges and utilize my education more meaningfully in the sphere
