@@ -1,8 +1,15 @@
+![](https://github.com/AK270802/AK270802/blob/master/32a0091e-4c80-464a-96a6.png)
+# Akshay Vijay Panchal
+### Machine Learning Expert | Data Science Enthusiast | Data Analyst
+
+Welcome to my GitHub profile! 
 <h1 align="center">Hi, I'm Akshay</h1>
 <h4>An expert in designing and refining machine learning algorithms.
   And to accept the challenges and utilize my education more meaningfully in the sphere
 of technology and work hard towards achieving the goals of the organization. <br> Currently working on Algorithm Visualizer. I live in Mumbai, Maharastra, India 🇮🇳. 
 <br>🙌 I'm a geek, tech enthusiast, soccer fan.</p></h4>
+
+[![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AK270802&theme=dark)](https://github.com/AK270802)
 
 
 <h3 align="center">Let's Get Connected</h3>
