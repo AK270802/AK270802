@@ -1,7 +1,7 @@
 ![](https://github.com/AK270802/AK270802/blob/master/32a0091e-4c80-464a-96a6.png)
 
 # <h1 align="center">Hi, I'm Akshay</h1>
-### Machine Learning Expert | Data Science Enthusiast | Data Analyst
+### < h2 align="center">Machine Learning Expert | Data Science Enthusiast | Data Analyst</h2>
 
 <h4 align="center">An expert in designing and refining machine learning algorithms, ready to accept challenges and utilize my education in the technology sphere. Currently working on Algorithm Visualizer. I live in Mumbai, Maharashtra, India 🇮🇳.<br>🙌 I'm a geek, tech enthusiast, and soccer fan.</h4>
 
@@ -16,8 +16,8 @@
 
 [![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AK270802&theme=dark)](https://github.com/AK270802)
 
-## Top Repositories
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=AK270802&theme=dark&hide_border=true&repo=Data-Science-Projects)](https://github.com/AK270802/Data-Science-Projects) [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=AK270802&theme=dark&hide_border=true&repo=IBM-AI-Engineering)](https://github.com/AK270802/IBM-AI-Engineering)
+<!--## Top Repositories
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=AK270802&theme=dark&hide_border=true&repo=Data-Science-Projects)](https://github.com/AK270802/Data-Science-Projects) [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=AK270802&theme=dark&hide_border=true&repo=IBM-AI-Engineering)](https://github.com/AK270802/IBM-AI-Engineering)-->
 
 ## IDE
 [![](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) ![](https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white) ![](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252) ![](https://img.shields.io/badge/PyCharm-000000.svg?&style=for-the-badge&logo=PyCharm&logoColor=white) ![](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://github.com/AK270802)
