@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — Agentic AI, MLOps &amp; Platform Engineering | Akshay V Panchal</title>
+  <meta name="description" content="Akshay V Panchal's technical stack in context: LangGraph and multi-agent LLM orchestration, XGBoost/Prophet/MLflow/Feast applied ML, Airflow and Kubernetes infrastructure, Django and FastAPI backends, Qdrant vector search.">
+  <link rel="canonical" href="https://ak270802.github.io/AK270802/skills.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Skills — Akshay V Panchal">
+  <meta property="og:description" content="Agentic LLM systems, applied ML, data infrastructure, backend and vector search — grouped with the reasons they matter.">
+  <meta property="og:url" content="https://ak270802.github.io/AK270802/skills.html">
+  <meta property="og:image" content="https://ak270802.github.io/AK270802/images/logo/avatar.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Skills — Akshay V Panchal">
+  <meta name="twitter:description" content="Agentic LLM systems, applied ML, data infrastructure, backend and vector search — grouped with the reasons they matter.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="skills">
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="./" class="wordmark" aria-label="Akshay — home"><span class="mono">AK·</span>Akshay</a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="about.html"><span class="nav-idx">01</span>About</a></li>
+          <li><a href="experience.html"><span class="nav-idx">02</span>Experience</a></li>
+          <li><a href="projects.html"><span class="nav-idx">03</span>Projects</a></li>
+          <li><a href="skills.html" aria-current="page"><span class="nav-idx">04</span>Skills</a></li>
+          <li><a href="writing.html"><span class="nav-idx">05</span>Writing</a></li>
+          <li><a href="contact.html"><span class="nav-idx">06</span>Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+        </button>
+        <button id="nav-toggle" class="icon-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="section wrap">
+      <p class="layer-tag">Layer 04 / Weights</p>
+      <h1 data-words>The stack, with the reasons attached.</h1>
+      <p class="lede" style="margin-top:1.4rem">Tools are cheap to list and expensive to choose well. Each group below comes from systems described on the <a href="projects.html">projects</a> and <a href="experience.html">experience</a> pages — not from a tutorial.</p>
+    </section>
+
+    <section class="wrap">
+
+      <div class="skill-group reveal">
+        <div>
+          <h2>Agentic &amp; LLM systems</h2>
+          <p class="why">The core of my current work: multi-agent pipelines where each agent has a narrow contract, a supervisor, and a measurable output. Retrieval grounds generation before it happens.</p>
+        </div>
+        <ul class="chips">
+          <li>LangGraph</li>
+          <li>Multi-agent orchestration</li>
+          <li>RAG pipelines</li>
+          <li>Prompt &amp; context engineering</li>
+          <li>LLM evaluation &amp; guardrails</li>
+          <li>Docling document parsing</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal">
+        <div>
+          <h2>Applied ML</h2>
+          <p class="why">Forecasting and scoring models that run on schedules, not in notebooks — with a feature store so six platform modules share one definition of truth, and MLflow so every model in production can be traced back.</p>
+        </div>
+        <ul class="chips">
+          <li>XGBoost</li>
+          <li>Prophet</li>
+          <li>MLflow</li>
+          <li>Feast</li>
+          <li>scikit-learn</li>
+          <li>Model monitoring</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal">
+        <div>
+          <h2>Data &amp; infrastructure</h2>
+          <p class="why">The unglamorous layer that decides whether AI features work at 3am: orchestration, async processing, and the cloud primitives underneath a multi-tenant platform.</p>
+        </div>
+        <ul class="chips">
+          <li>Airflow</li>
+          <li>Celery</li>
+          <li>Redis</li>
+          <li>AWS</li>
+          <li>Kubernetes</li>
+          <li>MinIO</li>
+          <li>Docker</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal">
+        <div>
+          <h2>Backend</h2>
+          <p class="why">Where the AI meets the product: APIs with authentication, tenancy, rate limits and audit trails. Django for platform surface area, FastAPI for focused microservices like Kestrel.</p>
+        </div>
+        <ul class="chips">
+          <li>Django / DRF</li>
+          <li>FastAPI</li>
+          <li>Python</li>
+          <li>PostgreSQL</li>
+          <li>REST API design</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal">
+        <div>
+          <h2>Frontend</h2>
+          <p class="why">Enough to architect and review the client side of a SaaS honestly — LexAI's frontend is Next.js 14, chosen for server components and route-level data loading, not fashion.</p>
+        </div>
+        <ul class="chips">
+          <li>Next.js 14</li>
+          <li>React</li>
+          <li>TypeScript</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal">
+        <div>
+          <h2>Vector &amp; search</h2>
+          <p class="why">Retrieval quality caps everything downstream of it. Qdrant in production for LexAI, with bge-small embeddings picked deliberately: strong recall at a latency and hosting cost small firms can afford.</p>
+        </div>
+        <ul class="chips">
+          <li>Qdrant</li>
+          <li>Embedding models (BAAI/bge)</li>
+          <li>Hybrid retrieval</li>
+          <li>Chunking strategies</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="section wrap reveal">
+      <p class="layer-tag">Next layer</p>
+      <ul class="deep-links">
+        <li><a href="writing.html">
+          <span class="nav-idx">05</span>
+          <span class="dl-title">Writing</span>
+          <span class="dl-note">Outputs</span>
+        </a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <p class="mono footer-tag">End of sequence</p>
+        <p>Akshay V Panchal — AI Lead Engineer.<br>Cork, Ireland · open to UK &amp; GCC engagements.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="mailto:avpdazzler2708@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/akshay-panchal8702/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/AK270802" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <p class="footer-meta">© 2026 Akshay V Panchal · <a href="privacy/">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script type="module" src="js/scene.js"></script>
+</body>
+
+</html>

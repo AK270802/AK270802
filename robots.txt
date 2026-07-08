@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ak270802.github.io/AK270802/sitemap.xml
